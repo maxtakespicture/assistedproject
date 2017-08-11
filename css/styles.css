@@ -1,0 +1,562 @@
+
+/*================================= SITE RESET ===============================*/
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain) */
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+}
+
+
+/*================================= COLUMNS =================================*/
+
+div[class="col-desk-*"] {
+    float: left;
+}
+.col-desk-1 {width: 8.33%; float: left;}
+.col-desk-2 {width: 16.66%; float: left;} 
+.col-desk-3 {width: 25%;float: left;}
+.col-desk-4 {width: 33.33%;float: left;}
+.col-desk-5 {width: 41.66%;float: left;}
+.col-desk-6 {width: 50%;float: left;}
+.col-desk-7 {width: 58.33%;float: left;}
+.col-desk-8 {width: 66.66%;float: left;}
+.col-desk-9 {width: 75%; float: left;}
+.col-desk-10 {width: 83.33%;float: left;}
+.col-desk-11 {width: 91.66%;float: left;}
+.col-desk-12 {width: 100%;float: left;}
+
+.small {height: 30px;}
+.medium {height: 100px;}
+.large {height: 500px;}
+
+/*================================= BASIC SITE STYLES =======================*/
+
+.clearfix {
+    display: block;
+    float: none;
+    clear: both;
+}
+
+.show-mob {
+    display: none;
+}
+
+body {
+    background-color: black;
+    color: #808080;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+h1, h2, h3, h4, h6 {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    letter-spacing: 5px;
+}
+
+h1 {
+    color: #c0c0c0;
+    font-size: 20px;
+    line-height: 2.5;
+    letter-spacing: 10px;
+    transition: 0.2s box-shadow, text-shadow ease;
+    border: 2px solid #c0c0c0;
+    padding: 30px;
+    margin-bottom: 100px;
+    margin-top: 60px;
+}
+
+
+h3 {
+    color: white;
+    font-size: 18px;
+    padding: 40px 0;
+}
+
+h6 {
+    display: inline;
+    text-align: center;
+    color: #d3d3d3;
+    font-size: 10px;
+}
+
+
+.horizontal {
+    background-color: #d3d3d3;
+    height: 1px;
+}
+
+.vertical {
+    float: left;
+    background-color: #d3d3d3;
+    width: 1px;
+    height: 800px;
+}
+
+.justify {
+    text-align: justify;
+}
+
+.margin {
+    margin-left: 30px;
+}
+
+.columns {
+    -moz-column-count: 3;
+    -webkit-column-count:3;
+    column-count:3;
+    -moz-column-gap: 40px;
+    -webkit-column-gap:40px;
+    column-gap:40px;
+}
+
+h1:hover {
+    box-shadow: 0 0 10px rgba(241, 183, 67, 1), 0 0 5px rgba(201, 131, 56, 1);
+    text-shadow: 0 0 20px rgba(241, 183, 67, 1), 0 0 5px rgba(201, 131, 56, 1);
+    transition: 0.2s box-shadow, text-shadow ease;
+    cursor: pointer;
+}
+
+.gradient {
+    background: rgba(50,);
+    background: -moz-linear-gradient(top, rgba(50,50,50,1) 0%, rgba(0,0,0,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(50,50,50,1) 0%, rgba(0,0,0,1) 100%);
+    background: -o-linear-gradient(top, rgba(50,50,50,1) 0%, rgba(0,0,0,1) 100%);
+    background: -ms-linear-gradient(top, rgba(50,50,50,1) 0%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(to bottom, rgba(50,50,50,1) 0%, rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient
+            (startColorstr='#454545', endColorstr='#000000', GradientType=0);
+}
+
+.subtitle, .about, footer {
+    margin-top: 50px;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~ HEADER ~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+header {
+    background: rgba(0,0,0,1);
+    background: -moz-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 46%, rgba(50,50,50,1) 100%);
+    background: -webkit-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 46%, rgba(50,50,50,1) 100%);
+    background: -o-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 46%, rgba(50,50,50,1) 100%);
+    background: -ms-linear-gradient(top, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 46%, rgba(50,50,50,1) 100%);
+    background: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 46%, rgba(50,50,50,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient
+            (startColorstr='#000000', endColorstr='#454545', GradientType=0);
+}
+
+img {
+    display: block;
+    margin: 0 auto;
+}
+
+.logo-img {
+    max-width: 250px;
+    margin-top: 30px;
+}
+
+.logo-text {
+    margin: 30px auto;
+    max-width: 550px;
+}
+
+ul h2 {
+    display: inline;
+    text-align: center;
+    padding: 30px;
+    margin: 0 auto;
+}
+
+ul li {
+    display: inline;
+}
+
+a:hover {
+    color: #f1b743;
+    transition: 0.2s all ease;
+}
+
+button, #subbtn {
+    width: 200px;
+    background: #f1b743;
+    background-image: -webkit-linear-gradient(top, #f1b743, #f07a43);
+    background-image: -moz-linear-gradient(top, #f1b743, #f07a43);
+    background-image: -ms-linear-gradient(top, #f1b743, #f07a43);
+    background-image: -o-linear-gradient(top, #f1b743, #f07a43);
+    background-image: linear-gradient(to bottom, #f1b743, #f07a43);
+    border: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    padding: 10px 20px 10px 20px;
+    margin: 20px auto;
+}
+
+button:hover, #subbtn:hover {
+    background: #cc9b39;
+    background-image: -webkit-linear-gradient(top, #cc9b39, #cc6739);
+    background-image: -moz-linear-gradient(top, #cc9b39, #cc6739);
+    background-image: -ms-linear-gradient(top, #cc9b39, #cc6739);
+    background-image: -o-linear-gradient(top, #cc9b39, #cc6739);
+    background-image: linear-gradient(to bottom, #cc9b39, #cc6739);
+    text-decoration: none;
+    transition: 0.2s all ease;
+}
+
+a {
+   text-decoration: none;
+   color: #d3d3d3;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~ NAV ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+nav {
+    text-align: center;
+    padding-bottom: 30px;
+    margin: 0 auto;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~ SUBTITLE ~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.subtitle {
+    background-image: url('../img/embers-large.png');
+    background-position: center;
+}
+
+section.subtitle article {
+    text-align: center;
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~ FOOTER ~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+footer {
+    text-align: center;
+    background-image: url('../img/embers-large.png');
+    background-position: center;
+    background-size: 100%;
+}
+
+small {
+    display: block;
+    text-align: center;
+    line-height: 2em;
+    font-size: 10px;
+    color: white;
+    padding-bottom: 30px;
+}
+
+.fa {
+    color: #f1b743;
+    padding: 0 40px 30px 40px;
+}
+
+.fa:hover {
+    color: #cc9b39;
+    transition: 0.2s all ease;
+}
+
+
+/*================================= CONTACT =======================*/
+
+#contact .entry {
+    border: solid 2px #F1B743;
+    padding: 5px 0 5px 0;
+    margin-bottom: 30px;
+    width: 92%;
+}
+
+textarea {
+    height: 100px;
+    margin-top: 20px;
+}
+
+h5 {
+    color: #F1B743;
+    size: 20px;
+}
+
+#contact .contact {
+    padding-top: 40px;
+}
+
+#contact .justify {
+    line-height: 2em;
+    padding: 0 30px 30px 0;
+    }
+
+#contact .margin {
+    line-height: 2em;
+    margin-left: 30px;
+}
+
+.map {
+    margin-left: 30px;
+    height: 550px;
+}
+
+.rad {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    padding-top: 3px;
+    cursor: pointer;
+}
+
+.rad input {
+        position: absolute;
+        z-index: -1;
+        opacity: 0;
+}
+
+.rad_indicator {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 15px;
+    width: 15px;
+    background: #e6e6e6;
+    border: none;
+}
+
+.rad-radio .rad_indicator {
+    border-radius: 50%;
+}
+
+.rad:hover input ~ .rad_indicator, .rad input:focus ~ .rad_indicator {
+    background: #cccccc;
+}
+
+.rad input:checked ~ .rad_indicator {
+    background: #F1B743;
+}
+
+.rad:hover input:checked ~ .rad_indicator, .rad input:checked:focus ~ .rad_indicator {
+    background: #F1B743;
+}
+
+.rad_indicator:after {
+    box-sizing: unset;
+    content: '';
+    position: absolute;
+    display: none;
+}
+
+.rad input:checked ~ .rad_indicator:after {
+    display: block;
+}
+
+.rad-radio .rad_indicator:after {
+    left: 5px;
+    top: 5px;
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background: #ffffff;
+}
+
+/*================================= QUERY ===================================*/
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~ TABLET ~~~~~~~~~~~~~~~~~~~~~~*/
+
+@media screen and (min-width: 601px) and (max-width: 880px) {
+  
+    .col-tab-1 {width: 8.33%;}
+    .col-tab-2 {width: 16.66%;}
+    .col-tab-3 {width: 25%;}
+    .col-tab-4 {width: 33.33%;}
+    .col-tab-5 {width: 41.66%;}
+    .col-tab-6 {width: 50%;}
+    .col-tab-7 {width: 58.33%;}
+    .col-tab-8 {width: 66.66%;}
+    .col-tab-9 {width: 75%;}
+    .col-tab-10 {width: 83.33%;}
+    .col-tab-11 {width: 91.66%;}
+    .col-tab-12 {width: 100%;}
+
+    h1 {
+        padding: 10px;
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 50px;
+    }
+
+    footer {
+        background-image: url('../img/embers-medium.png');
+        background-position: center;
+        background-size: 100%;
+    }
+
+    body {
+        font-size: 16px;
+    }
+
+    small {
+        font-size: 8px;
+    }
+
+    .columns {
+    -moz-column-count: 2;
+    -webkit-column-count:2;
+    column-count:2;
+    -moz-column-gap: 30px;
+    -webkit-column-gap:30px;
+    column-gap:30;
+}
+
+    #contact .map {
+        height: 300px;
+        margin-top: 20px;
+    }
+
+    #subbtn {
+        width: 92%;
+    }
+
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~ MOBILE ~~~~~~~~~~~~~~~~~~~~~~*/
+
+@media screen and (min-width: 180px) and (max-width: 600px) {
+    .col-mob-0 {width: 0;}
+    .col-mob-1 {width: 8.33%;}
+    .col-mob-2 {width: 16.66%;}
+    .col-mob-3 {width: 25%;}
+    .col-mob-4 {width: 33.33%;}
+    .col-mob-5 {width: 41.66%;}
+    .col-mob-6 {width: 50%;}
+    .col-mob-7 {width: 58.33%;}
+    .col-mob-8 {width: 66.66%;}
+    .col-mob-9 {width: 75%;}
+    .col-mob-10 {width: 83.33%;}
+    .col-mob-11 {width: 91.66%;}
+    .col-mob-12 {width: 100%;}
+
+    .small {height:10px;}
+
+    .show-mob {
+        display: block;
+    }
+
+    .hidden-mob {
+        display: none;
+    }
+
+
+    h1 {
+        padding: 10px;
+        font-size: 14px;
+        text-align: center;
+        margin-top: 0px;
+        margin-bottom: 50px;
+    }
+
+    h2 {
+        padding: 0;
+        font-size: 12px;
+        margin-top: 20px;
+    }
+
+    h3 {
+        font-size: 12px;
+        padding: 30px 0;
+    }
+
+    body {
+        font-size: 12px;
+        line-height: 20px;
+    }
+
+    .more {
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    .columns {
+    -moz-column-count: 1;
+    -webkit-column-count:1;
+    column-count:1;
+    -moz-column-gap: 0;
+    -webkit-column-gap:0;
+    column-gap:0;
+    margin: 0;
+    }
+
+    #contact .contact {
+        padding-top: 10px;
+    }
+
+    #contact form, #contact .justify {
+        margin-left: 30px;
+    }
+
+    #contact .map {
+        height: 200px;
+        margin-top: 20px;
+    }
+
+    #subbtn {
+        width: 92%;
+    }
+
+    footer {
+    background-image: url('../img/embers-small.png');
+    background-position: center;
+    background-size: 100%;
+    }
+
+    .fa {
+    color: #f1b743;
+    padding: 10px;
+    }
+
+    small {
+        font-size: 6px;
+    }
+
+}
